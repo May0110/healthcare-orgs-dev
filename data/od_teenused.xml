@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<teenused hetk="2023-01-28T17:00:00">
+    <teenus>
+        <kood>?</kood>
+        <nimi>Apteegiteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0001</kood>
+        <nimi>koolitervishoiuteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0003</kood>
+        <nimi>hambaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0004</kood>
+        <nimi>Statsionaarsed otorinolarüngoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0005</kood>
+        <nimi>Statsionaarsed psühhiaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0006</kood>
+        <nimi>ambulatoorsed günekoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0007</kood>
+        <nimi>peremeditsiiniteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0008</kood>
+        <nimi>Statsionaarsed oftalmoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0009</kood>
+        <nimi>Statsionaarsed reumatoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0014</kood>
+        <nimi>kiirabiteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0015</kood>
+        <nimi>radioloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0016</kood>
+        <nimi>radioloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0017</kood>
+        <nimi>nõelraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0019</kood>
+        <nimi>Statsionaarnsed ortopeediateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0020</kood>
+        <nimi>Statsionaarsed dermatoveneroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0022</kood>
+        <nimi>ambulatoorsed uroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0024</kood>
+        <nimi>Statsionaarsed anestesioloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0028</kood>
+        <nimi>Statsionaarsed kardioloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0029</kood>
+        <nimi>Statsionaarsed gastroenteroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0030</kood>
+        <nimi>Statsionaarsed neuroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0031</kood>
+        <nimi>Statsionaarsed pulmonoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0032</kood>
+        <nimi>Statsionaarsed pediaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0033</kood>
+        <nimi>laboriteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0034</kood>
+        <nimi>Statsionaarsed endokrinoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0035</kood>
+        <nimi>Statsionaarsed hematoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0038</kood>
+        <nimi>ambulatoorsed üldkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0039</kood>
+        <nimi>neerupuudulikkusega haigete hemodialüüsravi</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0044</kood>
+        <nimi>Statsionaarsed suu-, näo- ja lõualuukirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0046</kood>
+        <nimi>ultraheliuuringud</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0049</kood>
+        <nimi>Statsionaarsed uroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0050</kood>
+        <nimi>Statsionaarsed üldkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0052</kood>
+        <nimi>päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0054</kood>
+        <nimi>Statsionaarsed neurokirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0055</kood>
+        <nimi>töötervishoiuteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0056</kood>
+        <nimi>kunstliku viljastamise teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0057</kood>
+        <nimi>uroloogia-androloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0058</kood>
+        <nimi>intensiivraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0059</kood>
+        <nimi>Statsionaarsed sünnitusabi- ja günekoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0060</kood>
+        <nimi>päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0061</kood>
+        <nimi>ambulatoorsed oftalmoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0064</kood>
+        <nimi>manuaalteraapiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0065</kood>
+        <nimi>ambulatoorsed dermatoveneroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0066</kood>
+        <nimi>ambulatoorsed endokrinoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0067</kood>
+        <nimi>erakorralise meditsiini teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0068</kood>
+        <nimi>ambulatoorsed gastroenteroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0069</kood>
+        <nimi>ambulatoorsed hematoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0070</kood>
+        <nimi>ambulatoorsed infektsioonhaiguste teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0071</kood>
+        <nimi>ambulatoorsed kardioloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0072</kood>
+        <nimi>ambulatoorsed nefroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0073</kood>
+        <nimi>ambulatoorsed neurokirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0074</kood>
+        <nimi>ambulatoorsed neuroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0075</kood>
+        <nimi>ambulatoorsed onkoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0076</kood>
+        <nimi>ambulatoorsed ortopeediateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0077</kood>
+        <nimi>ambulatoorsed otorinolarüngoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0078</kood>
+        <nimi>Patoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0079</kood>
+        <nimi>ambulatoorsed psühhiaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0080</kood>
+        <nimi>ambulatoorsed pulmonoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0081</kood>
+        <nimi>ambulatoorsed reumatoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0082</kood>
+        <nimi>ambulatoorsed suu-, näo-ja lõualuukirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0083</kood>
+        <nimi>ambulatoorsed taastusravi ja füsiaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0084</kood>
+        <nimi>ambulatoorsed torakaalkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0086</kood>
+        <nimi>Statsionaarsed nefroloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0087</kood>
+        <nimi>Statsionaarsed onkoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0088</kood>
+        <nimi>Statsionaarsed taastusravi ja füsiaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0089</kood>
+        <nimi>torakaalkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0090</kood>
+        <nimi>Statsionaarsed kardiovaskulaarkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0091</kood>
+        <nimi>ambulatoorsed sisehaiguste teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0092</kood>
+        <nimi>Statsionaarsed sisehaiguste teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0093</kood>
+        <nimi>Statsionaarsed anestesioloogiateenused sh I astme intensiivravi</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0094</kood>
+        <nimi>Statsionaarsed anestesioloogiateenused sh II astme intensiivravi</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0095</kood>
+        <nimi>Statsionaarsed anestesioloogiateenused sh III astme intensiivravi</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0096</kood>
+        <nimi>ambulatoorsed kardiovaskulaarkirurgia teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0100</kood>
+        <nimi>statsionaarsed ortodontia teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0101</kood>
+        <nimi>Statsionaarsed lastekirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0103</kood>
+        <nimi>ambulatoorsed sünnitusabi ja günekoloogia teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0104</kood>
+        <nimi>ambulatoorsed pediaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0105</kood>
+        <nimi>hooldusraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0110</kood>
+        <nimi>vähihaigete koduse toetusravi teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0112</kood>
+        <nimi>Statsionaarsed infektsioonhaiguste teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0113</kood>
+        <nimi>tsütoloogilised uuringud</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0114</kood>
+        <nimi>üldkirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0115</kood>
+        <nimi>nefroloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0116</kood>
+        <nimi>ambulatoorsed dermatoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0117</kood>
+        <nimi>onkoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0118</kood>
+        <nimi>raseduse katkestamise teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0119</kood>
+        <nimi>ambulatoorsed plastikakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0120</kood>
+        <nimi>oftalmoloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0121</kood>
+        <nimi>günekoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0122</kood>
+        <nimi>sisehaiguste päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0123</kood>
+        <nimi>üldkirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0124</kood>
+        <nimi>ortopeedia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0125</kood>
+        <nimi>otorinolarüngoloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0126</kood>
+        <nimi>dermatoveneroloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0127</kood>
+        <nimi>endokrinoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0128</kood>
+        <nimi>plastikakirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0129</kood>
+        <nimi>uroloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0130</kood>
+        <nimi>ambulatoorsed plastika-ja rekonstruktiivkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0131</kood>
+        <nimi>Statsionaarsed plastika-ja rekonstruktiivkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0132</kood>
+        <nimi>taastusravialased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0133</kood>
+        <nimi>neuroloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0134</kood>
+        <nimi>pediaatria päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0135</kood>
+        <nimi>üldkirurgia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0136</kood>
+        <nimi>otorinolarüngoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0137</kood>
+        <nimi>ortopeedia V grupi operatsioonide teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0138</kood>
+        <nimi>suurte liigeste endoproteesimise operatsioonide teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0139</kood>
+        <nimi>infektsioonhaiguste teenused ( tuberkuloosiravi psüühilise häirega patsientidele ja tahtevastane tuberkuloosiravi )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0140</kood>
+        <nimi>ambulatoorsed lastekirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0141</kood>
+        <nimi>günekoloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0142</kood>
+        <nimi>kohleaarimplantatsiooni operatsioonide teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0143</kood>
+        <nimi>neeru implantatsiooni operatsioonide teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0144</kood>
+        <nimi>laste kardiokirurgiliste operatsioonide teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0145</kood>
+        <nimi>hematoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0146</kood>
+        <nimi>neurokirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0148</kood>
+        <nimi>psühhiaatria päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0149</kood>
+        <nimi>kardiovaskulaarkirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0150</kood>
+        <nimi>ambulatoorsed psühhiaatriateenused (sh lastepsühhiaatria)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0151</kood>
+        <nimi>ambulatoorsed psühhoteraapiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0152</kood>
+        <nimi>uroloogia-androloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0154</kood>
+        <nimi>gastroenteroloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0155</kood>
+        <nimi>endokriinkirurgiliste operatsioonide teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0156</kood>
+        <nimi>nukleaarmeditsiiniliste (isotoopdiagnostika- ja ravi) teenuste osutamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0157</kood>
+        <nimi>tüsistunud ja keeruliste revisioon-endoproteesimiste teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0159</kood>
+        <nimi>uroloogiliste operatsioonide ( kood 060310 ) teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0160</kood>
+        <nimi>günekoloogiliste operatsioonide ( kood 051103 ) teostamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0161</kood>
+        <nimi>ambulatoorsed lastepsühhiaatriateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0162</kood>
+        <nimi>ambulatoorsed veresoontekirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0163</kood>
+        <nimi>veresoontekirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0164</kood>
+        <nimi>ambulatoorsed taastusraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0165</kood>
+        <nimi>neurokirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0166</kood>
+        <nimi>infektsioonhaiguste teenused ( tuberkuloosiravi )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0168</kood>
+        <nimi>nefroloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0169</kood>
+        <nimi>ambulatoorsed taastusraviteenused (spordimeditsiin)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0170</kood>
+        <nimi>ambulatoorsed reumatoloogiateenused (külmravi)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0172</kood>
+        <nimi>ambulatoorsed onkoloogiateenused (keemiaravi tähenduses )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0173</kood>
+        <nimi>onkoloogiateenused ( keemiaravi tähenduses )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0174</kood>
+        <nimi>kardiovaskulaarkirurgiateenused (vaskulaarkirurgia mahus v.a IX grupi operatsioonid, mis vajavad ekstrakorporaalse vereringe tingimusi)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0175</kood>
+        <nimi>onkoloogia päevaraviteenused (keemiaravi tähenduses)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0176</kood>
+        <nimi>ortopeediaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0177</kood>
+        <nimi>uroloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0178</kood>
+        <nimi>kardioloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0179</kood>
+        <nimi>pulmonoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0180</kood>
+        <nimi>günekoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0181</kood>
+        <nimi>psühhiaatriaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0182</kood>
+        <nimi>sisehaigustealased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0183</kood>
+        <nimi>arstliku ekspertiisi teenus( s.h oftalmoloogia, otorinolarüngoloogia )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0184</kood>
+        <nimi>oftalmoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0185</kood>
+        <nimi>günekoloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0186</kood>
+        <nimi>kardioloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0187</kood>
+        <nimi>gastroenteroloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0189</kood>
+        <nimi>uroloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0190</kood>
+        <nimi>ortopeedia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0191</kood>
+        <nimi>ambulatoorsed sisehaiguste teenused( allergoloogia )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0202</kood>
+        <nimi>meditsiinigeneetika teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0203</kood>
+        <nimi>suu-, näo- ja lõualuukirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0204</kood>
+        <nimi>koduõendusteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0205</kood>
+        <nimi>dermatoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0206</kood>
+        <nimi>restauratiivse hambaravi teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0207</kood>
+        <nimi>lastekirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0208</kood>
+        <nimi>radioloogiateenused (nukleaarmeditsiiniteenused)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0209</kood>
+        <nimi>psühhiaatriateenused ( kohtu poolt määratud psühhiaatrilise sundravi kohaldamisel )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0210</kood>
+        <nimi>peremeditsiiniteenus ( pereõe töövaldkonda kuuluvad tervist edendavad ja haigusi ennetavad tegevused )</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0211</kood>
+        <nimi>torakaalkirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0212</kood>
+        <nimi>dermatoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0213</kood>
+        <nimi>otorinolarüngoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0214</kood>
+        <nimi>neuroloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0215</kood>
+        <nimi>pediaatriaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0216</kood>
+        <nimi>ambulatoorsed allergoloogia-immunoloogia teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0217</kood>
+        <nimi>allergoloogia-immunoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0218</kood>
+        <nimi>iseseisev statsionaarne õendusabiteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0219</kood>
+        <nimi>hematoloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0220</kood>
+        <nimi>reumatoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0221</kood>
+        <nimi>endokrinoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0222</kood>
+        <nimi>anestesioloogiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0223</kood>
+        <nimi>vaskulaarkirurgia päevaravi</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0224</kood>
+        <nimi>anestesioloogiaalased konsultatsioonid (valuravi)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0225</kood>
+        <nimi>taastusravi päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0226</kood>
+        <nimi>allergoloogia-immunoloogia alased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0227</kood>
+        <nimi>südame siirdamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0228</kood>
+        <nimi>neerude siirdamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0229</kood>
+        <nimi>maksa siirdamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0230</kood>
+        <nimi>kopsude siirdamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0231</kood>
+        <nimi>kõhunäärme siirdamine</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0232</kood>
+        <nimi>suu-, näo- ja lõualuukirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0233</kood>
+        <nimi>plastika-ja rekonstruktiivkirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0234</kood>
+        <nimi>plastikakirurgia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0235</kood>
+        <nimi>restauratiivse hambaravi alased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0236</kood>
+        <nimi>õe vastuvõtuteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0237</kood>
+        <nimi>sünnitusabi- ja günekoloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0238</kood>
+        <nimi>nefroloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0239</kood>
+        <nimi>gastroenteroloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0240</kood>
+        <nimi>infektsioonhaiguste teenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0241</kood>
+        <nimi>oftalmoloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0242</kood>
+        <nimi>reumatoloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0243</kood>
+        <nimi>endokrinoloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0244</kood>
+        <nimi>otorinolarüngoloogiateenused (piirkondliku haigla mahus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0245</kood>
+        <nimi>veresoontekirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0246</kood>
+        <nimi>ambulatoorsed psühhiaatriateenused metadoonasendusravi osutamiseks</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0247</kood>
+        <nimi>onkoloogia päevakirurgia- ja päevaraviteenused (keemiaravi ja kiiritusravi tähenduses)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0248</kood>
+        <nimi>laborimeditsiinialased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0251</kood>
+        <nimi>iseseisev ämmaemandusabi teenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0252</kood>
+        <nimi>kodusünnitusabi teenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0253</kood>
+        <nimi>peremeditsiinialased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0254</kood>
+        <nimi>ämmaemandusabi nõustamisteenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0255</kood>
+        <nimi>onkoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0256</kood>
+        <nimi>ambulatoorne ämmaemandusabi teenus</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0257</kood>
+        <nimi>kardioloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0257</kood>
+        <nimi>ambulatoorsed kardiokirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0257</kood>
+        <nimi>ambulatoorsed vaskulaarkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0257</kood>
+        <nimi>plastika-ja rekonstruktiivkirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0257</kood>
+        <nimi>Statsionaarsed kardiokirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0257</kood>
+        <nimi>Statsionaarsed vaskulaarkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0258</kood>
+        <nimi>kardiokirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0259</kood>
+        <nimi>torakaalkirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0260</kood>
+        <nimi>ambulatoorne eriarstiabi (mittekirurgiline esteetilise meditsiini teenus)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0261</kood>
+        <nimi>lastekirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0261</kood>
+        <nimi>kardiovaskulaarkirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0262</kood>
+        <nimi>oftalmoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0262</kood>
+        <nimi>kardiovaskulaarkirurgia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0262</kood>
+        <nimi>suu-, näo- ja lõualuukirurgia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0263</kood>
+        <nimi>statsionaarsed psühhiaatriateenused (v.a akuutpsühhiaatria)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0264</kood>
+        <nimi>ambulatoorsed peremeditsiiniteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0265</kood>
+        <nimi>ambulatoorsed radioloogiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0266</kood>
+        <nimi>anestesioloogia päevakirurgiateenusena</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0267</kood>
+        <nimi>pulmonoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0268</kood>
+        <nimi>infektsioonhaiguste päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0269</kood>
+        <nimi>ambulatoorsed töötervishoiuteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0270</kood>
+        <nimi>ambulatoorsed meditsiinigeneetika teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0271</kood>
+        <nimi>ambulatoorsed taastusravi ja füsiaatriateenused (spordimeditsiin)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0272</kood>
+        <nimi>ambulatoorsed hemodialüüsiteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0273</kood>
+        <nimi>ambulatoorsed anestesioloogia teenused (valuravi)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0274</kood>
+        <nimi>gastroenteroloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0280</kood>
+        <nimi>plastika-ja rekonstruktiivkirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0281</kood>
+        <nimi>kardioloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0282</kood>
+        <nimi>kardiokirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0283</kood>
+        <nimi>vaskulaarkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0284</kood>
+        <nimi>ambulatoorsed kardiokirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0285</kood>
+        <nimi>ambulatoorsed vaskulaarkirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0286</kood>
+        <nimi>lastekirurgiaalased konsultatsioonid</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0287</kood>
+        <nimi>oftalmoloogia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0288</kood>
+        <nimi>kardiovaskulaarkirurgia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0289</kood>
+        <nimi>anestesioloogia teenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0290</kood>
+        <nimi>vaskulaarkirurgia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0291</kood>
+        <nimi>gastroenteroloogia päevakirurgiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0292</kood>
+        <nimi>ortodontiateenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0293</kood>
+        <nimi>Statsionaarsed psühhiaatriateenused (kohtu poolt määratud psühhiaatrilise sundravi kohaldamisel)</nimi>
+    </teenus>
+    <teenus>
+        <kood>T0294</kood>
+        <nimi>Ortopeedia päevaraviteenused</nimi>
+    </teenus>
+    <teenus>
+        <kood>TPmed</kood>
+        <nimi>üldarstiabi osutamine perearsti nimistu alusel</nimi>
+    </teenus>
+</teenused>

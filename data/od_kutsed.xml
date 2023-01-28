@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kutsed hetk="2023-01-28T17:00:00">
+    <kutse>
+        <kood>11</kood>
+        <nimi>Arst</nimi>
+        <grupp>Tervishoiutöötaja</grupp>
+    </kutse>
+    <kutse>
+        <kood>13</kood>
+        <nimi>Hambaarst</nimi>
+        <grupp>Tervishoiutöötaja</grupp>
+    </kutse>
+    <kutse>
+        <kood>15</kood>
+        <nimi>Õde</nimi>
+        <grupp>Tervishoiutöötaja</grupp>
+    </kutse>
+    <kutse>
+        <kood>17</kood>
+        <nimi>Ämmaemand</nimi>
+        <grupp>Tervishoiutöötaja</grupp>
+    </kutse>
+    <kutse>
+        <kood>18</kood>
+        <nimi>Farmatseut</nimi>
+        <grupp>Apteeker</grupp>
+    </kutse>
+    <kutse>
+        <kood>19</kood>
+        <nimi>Proviisor</nimi>
+        <grupp>Apteeker</grupp>
+    </kutse>
+</kutsed>

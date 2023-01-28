@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<erialad hetk="2023-01-28T17:00:00">
+    <eriala>
+        <kood>E100</kood>
+        <nimi>anestesioloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E110</kood>
+        <nimi>dermatoveneroloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E120</kood>
+        <nimi>endokrinoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E130</kood>
+        <nimi>erakorraline meditsiin</nimi>
+    </eriala>
+    <eriala>
+        <kood>E140</kood>
+        <nimi>gastroenteroloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E150</kood>
+        <nimi>hematoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E160</kood>
+        <nimi>infektsioonhaigused</nimi>
+    </eriala>
+    <eriala>
+        <kood>E170</kood>
+        <nimi>kardioloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E180</kood>
+        <nimi>kardiovaskulaarkirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E190</kood>
+        <nimi>laborimeditsiin</nimi>
+    </eriala>
+    <eriala>
+        <kood>E200</kood>
+        <nimi>lastekirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E210</kood>
+        <nimi>nefroloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E220</kood>
+        <nimi>neurokirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E230</kood>
+        <nimi>neuroloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E240</kood>
+        <nimi>oftalmoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E250</kood>
+        <nimi>onkoloogia (kiiritus- ja keemiaravi tähenduses)</nimi>
+    </eriala>
+    <eriala>
+        <kood>E260</kood>
+        <nimi>ortopeedia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E270</kood>
+        <nimi>otorinolarüngoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E280</kood>
+        <nimi>patoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E290</kood>
+        <nimi>pediaatria</nimi>
+    </eriala>
+    <eriala>
+        <kood>E300</kood>
+        <nimi>peremeditsiin</nimi>
+    </eriala>
+    <eriala>
+        <kood>E310</kood>
+        <nimi>plastika- ja rekonstruktiivkirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E320</kood>
+        <nimi>psühhiaatria</nimi>
+    </eriala>
+    <eriala>
+        <kood>E330</kood>
+        <nimi>pulmonoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E340</kood>
+        <nimi>radioloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E350</kood>
+        <nimi>reumatoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E360</kood>
+        <nimi>sisehaigused</nimi>
+    </eriala>
+    <eriala>
+        <kood>E370</kood>
+        <nimi>sünnitusabi ja günekoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E380</kood>
+        <nimi>taastusravi</nimi>
+    </eriala>
+    <eriala>
+        <kood>E390</kood>
+        <nimi>torakaalkirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E400</kood>
+        <nimi>töötervishoid</nimi>
+    </eriala>
+    <eriala>
+        <kood>E410</kood>
+        <nimi>uroloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E420</kood>
+        <nimi>üldkirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E440</kood>
+        <nimi>suu-, näo- ja lõualuukirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E450</kood>
+        <nimi>ortodontia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E460</kood>
+        <nimi>restauratiivne hambaravi</nimi>
+    </eriala>
+    <eriala>
+        <kood>E470</kood>
+        <nimi>allergoloogia-immunoloogia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E480</kood>
+        <nimi>kardiokirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E490</kood>
+        <nimi>vaskulaarkirurgia</nimi>
+    </eriala>
+    <eriala>
+        <kood>E500</kood>
+        <nimi>meditsiinigeneetika</nimi>
+    </eriala>
+    <eriala>
+        <kood>E510</kood>
+        <nimi>kohtuarstiteadus</nimi>
+    </eriala>
+    <eriala>
+        <kood>E610</kood>
+        <nimi>taastusravi spordimeditsiini lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E620</kood>
+        <nimi>laborimeditsiin kliinilise mikrobioloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E630</kood>
+        <nimi>oftalmoloogia silmakirurgia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E640</kood>
+        <nimi>sisehaigused allergoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E650</kood>
+        <nimi>sisehaigused kliinilise farmakoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E660</kood>
+        <nimi>sisehaigused geriaatria lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E670</kood>
+        <nimi>pediaatria allergoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E680</kood>
+        <nimi>pediaatria endokrinoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E690</kood>
+        <nimi>pediaatria gastroenteroloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E700</kood>
+        <nimi>pediaatria hematoloogia-onkoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E710</kood>
+        <nimi>pediaatria infektsioonhaiguste lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E720</kood>
+        <nimi>pediaatria kardioloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E730</kood>
+        <nimi>pediaatria nefroloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E740</kood>
+        <nimi>pediaatria neonatoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E750</kood>
+        <nimi>pediaatria neuroloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E760</kood>
+        <nimi>pediaatria reumatoloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E770</kood>
+        <nimi>psühhiaatria laste- ja noorukitepsühhiaatria lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E780</kood>
+        <nimi>uroloogia androloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E790</kood>
+        <nimi>hematoloogia transfusioloogia lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>E800</kood>
+        <nimi>radioloogia nukleaarmeditsiini lisapädevusega</nimi>
+    </eriala>
+    <eriala>
+        <kood>N100</kood>
+        <nimi>Intensiivõendus</nimi>
+    </eriala>
+    <eriala>
+        <kood>N200</kood>
+        <nimi>Kliiniline õendus</nimi>
+    </eriala>
+    <eriala>
+        <kood>N300</kood>
+        <nimi>Terviseõendus</nimi>
+    </eriala>
+    <eriala>
+        <kood>N400</kood>
+        <nimi>Vaimse tervise õendus</nimi>
+    </eriala>
+</erialad>
