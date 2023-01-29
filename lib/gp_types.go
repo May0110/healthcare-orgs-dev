@@ -18,6 +18,22 @@ type Asutus struct {
 	Tegevusload []Tegevusload `xml:"tegevusload"`
 }
 
+type Nimistud struct {
+	XMLName  xml.Name  `xml:"nimistud"`
+	Nimistud []Nimistu `xml:"nimistu"`
+}
+type Nimistu struct {
+	XMLName  xml.Name   `xml:"nimistu"`
+	Kood     string     `xml:"kood"`
+	Perearst Perearst   `xml:"perearst"`
+	Tootajad []Tootajad `xml:"tootajad"`
+}
+type Perearst struct {
+	XMLName  xml.Name `xml:"perearst"`
+	Eesnimi  string   `xml:"eesnimi"`
+	Perenimi string   `xml:"perenimi"`
+	Kood     string   `xml:"kood"`
+}
 type Tootajad struct {
 	XMLName  xml.Name  `xml:"tootajad"`
 	Tootajad []Tootaja `xml:"tootaja"`
@@ -28,6 +44,7 @@ type Tootaja struct {
 	Perenimi string   `xml:"perenimi"`
 	Kood     string   `xml:"kood"`
 	Kutse    string   `xml:"kutse_nimi"`
+	Roll     string   `xml:"roll_nimi"`
 }
 type Tegevusload struct {
 	XMLName     xml.Name      `xml:"tegevusload"`
