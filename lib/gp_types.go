@@ -14,8 +14,10 @@ type Asutus struct {
 	XMLName     xml.Name      `xml:"asutus"`
 	Nimi        string        `xml:"nimi"`
 	Kood        string        `xml:"registrikood"`
+	Aadress     string        `xml:"aadress"`
 	Tootajad    []Tootajad    `xml:"tootajad"`
 	Tegevusload []Tegevusload `xml:"tegevusload"`
+	ID          int           `xml:"primary-key"`
 }
 
 type Nimistud struct {
@@ -45,6 +47,8 @@ type Tootaja struct {
 	Kood     string   `xml:"kood"`
 	Kutse    string   `xml:"kutse_nimi"`
 	Roll     string   `xml:"roll_nimi"`
+	AsutusID int      `xml:"asutus_id"`
+	ID       int      `xml:"primary-key"`
 }
 type Tegevusload struct {
 	XMLName     xml.Name      `xml:"tegevusload"`
