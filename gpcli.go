@@ -70,12 +70,12 @@ func main() {
 		} else if choice == "91" {
 			lib.DropDatabaseTables(db)
 		} else if choice == "92" {
-			lib.ImportHCOData(db)
+			lib.Import(db)
 		} else if choice == CHOICE_EXIT {
-			fmt.Println("\nProgramm sulgub! Head päeva :)\n")
+			fmt.Printf("\nProgramm sulgub! Head päeva :)\n\n")
 		} else {
 			if choice != DEFAULT_CHOICE {
-				log.Printf("\n\nValik \"%s\" puudub, palun vali uuesti..\n\n", choice)
+				fmt.Printf("\n\nValik \"%s\" puudub, palun vali uuesti..\n\n", choice)
 			}
 		}
 

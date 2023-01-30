@@ -43,6 +43,16 @@ func CreateDatabaseTables(db *Database) (err error) {
 	}
 
 	err = CreateHcoLicenseResidenceService(db)
+	if err != nil {
+		return err
+	}
+
+	err = CreateHcoService(db)
+	if err != nil {
+		return err
+	}
+
+	err = CreateHcoProfession(db)
 
 	log.Printf("")
 	log.Printf("HCO database tables created!")
@@ -80,6 +90,16 @@ func DropDatabaseTables(db *Database) (err error) {
 	}
 
 	err = DropHcoLicenseResidenceService(db)
+	if err != nil {
+		return err
+	}
+
+	err = DropHcoService(db)
+	if err != nil {
+		return err
+	}
+
+	err = DropHcoProfession(db)
 
 	log.Printf("")
 	log.Printf("HCO database tables dropped!\n")

@@ -124,3 +124,51 @@ func InsertLicenseResidenceService(db *Database, teenus Teenus) (insertedRowID i
 
 	return
 }
+
+func InsertProfession(db *Database, eriala Eriala) (insertedRowID int, err error) {
+	table_name := "hco_profession"
+
+	var rawSQL string = fmt.Sprintf(
+		"insert into %s "+
+			"(code, name) "+
+			" values "+
+			"($1, $2) RETURNING 0",
+		table_name)
+
+	insertedRowID, err = db.Insert(rawSQL, eriala.Kood, eriala.Nimi)
+
+	if err != nil {
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+
+		return 0, err
+	} else {
+		log.Printf("Row no %s was inserted into '%s'", eriala.Kood, table_name)
+	}
+
+	return
+}
+
+func InsertService(db *Database, teenus Teenus) (insertedRowID int, err error) {
+	table_name := "hco_service"
+
+	var rawSQL string = fmt.Sprintf(
+		"insert into %s "+
+			"(code, name) "+
+			" values "+
+			"($1, $2) RETURNING 0",
+		table_name)
+
+	insertedRowID, err = db.Insert(rawSQL, teenus.Kood, teenus.Nimi)
+
+	if err != nil {
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+
+		return 0, err
+	} else {
+		log.Printf("Row no %s was inserted into '%s'", teenus.Kood, table_name)
+	}
+
+	return
+}

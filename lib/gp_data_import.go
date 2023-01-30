@@ -107,3 +107,81 @@ outer:
 		"HCO data import completed: %d HCO-s, %d employees, %d licenses, %d residences and %d services imported!",
 		hcoCount, employeeCount, licenseCount, licenseResidenceCount, licenseResidenceServiceCount)
 }
+
+func ImportHCOProfessions(db *Database) {
+	log.Printf("Starting with HCO professions import...")
+
+	time.Sleep(1 * time.Second)
+
+	var recordCount int = 0
+
+	xmlFile, err := os.Open("data/od_erialad.xml")
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer xmlFile.Close()
+	byteValue, _ := ioutil.ReadAll(xmlFile)
+
+	var erialad Erialad
+	err = xml.Unmarshal(byteValue, &erialad)
+	if err != nil {
+		fmt.Println(err)
+
+		return
+	}
+
+	for i := 0; i < len(erialad.Erialad); i++ {
+		var eriala Eriala = erialad.Erialad[i]
+
+		_, err = InsertProfession(db, eriala)
+		if err != nil {
+			return
+		}
+
+		recordCount++
+	}
+
+	log.Printf("HCO import completed: %d professions imported!", recordCount)
+}
+
+func ImportHCOServices(db *Database) {
+	log.Printf("Starting with HCO services import...")
+
+	time.Sleep(1 * time.Second)
+
+	var recordCount int = 0
+
+	xmlFile, err := os.Open("data/od_teenused.xml")
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer xmlFile.Close()
+	byteValue, _ := ioutil.ReadAll(xmlFile)
+
+	var teenused Teenused
+	err = xml.Unmarshal(byteValue, &teenused)
+	if err != nil {
+		fmt.Println(err)
+
+		return
+	}
+
+	for i := 0; i < len(teenused.Teenused); i++ {
+		var teenus Teenus = teenused.Teenused[i]
+
+		_, err = InsertService(db, teenus)
+		if err != nil {
+			return
+		}
+
+		recordCount++
+	}
+
+	log.Printf("HCO import completed: %d services imported!", recordCount)
+}
+
+func Import(db *Database) {
+	ImportHCOData(db)
+	ImportHCOProfessions(db)
+	ImportHCOServices(db)
+}

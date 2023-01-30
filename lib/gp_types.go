@@ -84,6 +84,15 @@ type Teenus struct {
 	Nimi          string   `xml:"nimi"`
 	TegevuskohtID int      `xml:"tegevuskoht_id"`
 }
+type Erialad struct {
+	XMLName xml.Name `xml:"erialad"`
+	Erialad []Eriala `xml:"eriala"`
+}
+type Eriala struct {
+	XMLName xml.Name `xml:"eriala"`
+	Kood    string   `xml:"kood"`
+	Nimi    string   `xml:"nimi"`
+}
 
 func init() {
 	fmt.Println("gplib initialized")

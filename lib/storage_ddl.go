@@ -161,6 +161,84 @@ func CreateHcoLicenseResidenceService(db *Database) (err error) {
 	return
 }
 
+func CreateHcoService(db *Database) (err error) {
+	table_name := "hco_service"
+	var rawSQL string = fmt.Sprintf(
+		"CREATE TABLE " + table_name +
+			" (code VARCHAR(15) NOT NULL, " +
+			"  name VARCHAR(200) NOT NULL)")
+
+	err = db.ExecuteDDL(rawSQL)
+
+	if err == nil {
+		log.Printf("Database table '%s' created", table_name)
+	} else {
+		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+	}
+
+	time.Sleep(time.Duration(ddlSleepMilliseconds) * time.Millisecond)
+
+	return
+}
+
+func CreateHcoProfession(db *Database) (err error) {
+	table_name := "hco_profession"
+	var rawSQL string = fmt.Sprintf(
+		"CREATE TABLE " + table_name +
+			" (code VARCHAR(15) PRIMARY KEY, " +
+			"  name VARCHAR(200) NOT NULL)")
+
+	err = db.ExecuteDDL(rawSQL)
+
+	if err == nil {
+		log.Printf("Database table '%s' created", table_name)
+	} else {
+		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+	}
+
+	time.Sleep(time.Duration(ddlSleepMilliseconds) * time.Millisecond)
+
+	return
+}
+
+func DropHcoProfession(db *Database) (err error) {
+	table_name := "hco_profession"
+	var rawSQL string = fmt.Sprintf("DROP TABLE " + table_name)
+
+	err = db.ExecuteDDL(rawSQL)
+
+	if err == nil {
+		log.Printf("Database table '%s' dropped", table_name)
+	} else {
+		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+	}
+
+	time.Sleep(time.Duration(ddlSleepMilliseconds) * time.Millisecond)
+
+	return err
+}
+
+func DropHcoService(db *Database) (err error) {
+	table_name := "hco_service"
+	var rawSQL string = fmt.Sprintf("DROP TABLE " + table_name)
+
+	err = db.ExecuteDDL(rawSQL)
+
+	if err == nil {
+		log.Printf("Database table '%s' dropped", table_name)
+	} else {
+		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+	}
+
+	time.Sleep(time.Duration(ddlSleepMilliseconds) * time.Millisecond)
+
+	return err
+}
+
 func DropHcoLicenseResidenceService(db *Database) (err error) {
 	table_name := "hco_license_residence_service"
 	var rawSQL string = fmt.Sprintf("DROP TABLE " + table_name)
