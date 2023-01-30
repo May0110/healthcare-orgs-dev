@@ -11,6 +11,7 @@ var db *lib.Database = nil
 var dbInitialized bool = false
 
 const DEFAULT_CHOICE string = "75"
+const CHOICE_EXIT string = "0"
 
 func initializeDatabaseConnection() (err error) {
 	if dbInitialized {
@@ -70,12 +71,16 @@ func main() {
 			lib.DropDatabaseTables(db)
 		} else if choice == "92" {
 			lib.ImportHCOData(db)
-		} else if choice == "0" {
+		} else if choice == CHOICE_EXIT {
 			fmt.Println("\nProgramm sulgub! Head päeva :)\n")
 		} else {
 			if choice != DEFAULT_CHOICE {
 				log.Printf("\n\nValik \"%s\" puudub, palun vali uuesti..\n\n", choice)
 			}
+		}
+
+		if choice != CHOICE_EXIT {
+			choice = DEFAULT_CHOICE
 		}
 	}
 }

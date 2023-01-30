@@ -18,6 +18,7 @@ func ImportHCOData(db *Database) {
 	var employeeCount int = 0
 	var licenseCount int = 0
 	var licenseResidenceCount int = 0
+	var licenseResidenceServiceCount int = 0
 
 	xmlFile, err := os.Open("data/od_asutused.xml")
 	if err != nil {
@@ -77,18 +78,32 @@ outer:
 				tegevuskoht := tl.Tegevuskohad[0].Tegevuskohad[kk]
 				tegevuskoht.TegevuslubaID = tegevuslubaID
 
-				_, err = InsertLicenseResidence(db, tegevuskoht)
+				tegevuskohtID, err := InsertLicenseResidence(db, tegevuskoht)
 
 				if err != nil {
 					break outer
 				}
 
 				licenseResidenceCount++
+
+				var teenuseid int = len(tegevuskoht.Teenused[0].Teenused)
+				for mm := 0; mm < teenuseid; mm++ {
+					teenus := tegevuskoht.Teenused[0].Teenused[mm]
+					teenus.TegevuskohtID = tegevuskohtID
+
+					_, err = InsertLicenseResidenceService(db, teenus)
+
+					if err != nil {
+						break outer
+					}
+
+					licenseResidenceServiceCount++
+				}
 			}
 		}
 	}
 
 	log.Printf(
-		"HCO data import completed: %d HCO-s, %d employees, %d licenses and %d residences imported!",
-		hcoCount, employeeCount, licenseCount, licenseResidenceCount)
+		"HCO data import completed: %d HCO-s, %d employees, %d licenses, %d residences and %d services imported!",
+		hcoCount, employeeCount, licenseCount, licenseResidenceCount, licenseResidenceServiceCount)
 }

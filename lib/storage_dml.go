@@ -100,3 +100,27 @@ func InsertLicenseResidence(db *Database, tk Tegevuskoht) (insertedRowID int, er
 
 	return
 }
+
+func InsertLicenseResidenceService(db *Database, teenus Teenus) (insertedRowID int, err error) {
+	table_name := "hco_license_residence_service"
+
+	var rawSQL string = fmt.Sprintf(
+		"insert into %s "+
+			"(hco_license_residence_id, code, name) "+
+			" values "+
+			"($1, $2, $3) RETURNING id",
+		table_name)
+
+	insertedRowID, err = db.Insert(rawSQL, teenus.TegevuskohtID, teenus.Kood, teenus.Nimi)
+
+	if err != nil {
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+
+		return 0, err
+	} else {
+		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+	}
+
+	return
+}

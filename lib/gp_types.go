@@ -69,9 +69,20 @@ type Tegevuskohad struct {
 	Tegevuskohad []Tegevuskoht `xml:"tegevuskoht"`
 }
 type Tegevuskoht struct {
-	XMLName       xml.Name `xml:"tegevuskoht"`
-	Aadress       string   `xml:"aadress"`
-	TegevuslubaID int      `xml:"tegevusluba_id"`
+	XMLName       xml.Name   `xml:"tegevuskoht"`
+	Aadress       string     `xml:"aadress"`
+	TegevuslubaID int        `xml:"tegevusluba_id"`
+	Teenused      []Teenused `xml:"teenused"`
+}
+type Teenused struct {
+	XMLName  xml.Name `xml:"teenused"`
+	Teenused []Teenus `xml:"teenus"`
+}
+type Teenus struct {
+	XMLName       xml.Name `xml:"teenus"`
+	Kood          string   `xml:"kood"`
+	Nimi          string   `xml:"nimi"`
+	TegevuskohtID int      `xml:"tegevuskoht_id"`
 }
 
 func init() {
