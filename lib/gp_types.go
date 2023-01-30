@@ -55,11 +55,23 @@ type Tegevusload struct {
 	Tegevusload []Tegevusluba `xml:"tegevusluba"`
 }
 type Tegevusluba struct {
-	XMLName      xml.Name `xml:"tegevusluba"`
-	Number       string   `xml:"tegevusloa_number"`
-	Alates       string   `xml:"alates"`
-	Kuni         string   `xml:"kuni"`
-	LoaliigiNimi string   `xml:"loaliik_nimi"`
+	XMLName      xml.Name       `xml:"tegevusluba"`
+	Number       string         `xml:"tegevusloa_number"`
+	Alates       string         `xml:"alates"`
+	Kuni         string         `xml:"kuni"`
+	LoaliigiNimi string         `xml:"loaliik_nimi"`
+	Tegevuskohad []Tegevuskohad `xml:"tegevuskohad"`
+	AsutusID     int            `xml:"asutus_id"`
+	ID           int            `xml:"primary-key"`
+}
+type Tegevuskohad struct {
+	XMLName      xml.Name      `xml:"tegevuskohad"`
+	Tegevuskohad []Tegevuskoht `xml:"tegevuskoht"`
+}
+type Tegevuskoht struct {
+	XMLName       xml.Name `xml:"tegevuskoht"`
+	Aadress       string   `xml:"aadress"`
+	TegevuslubaID int      `xml:"tegevusluba_id"`
 }
 
 func init() {

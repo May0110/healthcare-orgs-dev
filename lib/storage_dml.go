@@ -18,12 +18,12 @@ func InsertHealthcareOrganisation(db *Database, asutus Asutus) (insertedRowID in
 	insertedRowID, err = db.Insert(rawSQL, asutus.Nimi, asutus.Kood, asutus.Aadress)
 
 	if err != nil {
-		err = fmt.Errorf("Unable to insert HCO => %s", err.Error())
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 
 		return 0, err
 	} else {
-		log.Printf("HCO no %d inserted", insertedRowID)
+		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
 	}
 
 	return
@@ -42,12 +42,60 @@ func InsertEmployee(db *Database, tootaja Tootaja) (insertedRowID int, err error
 	insertedRowID, err = db.Insert(rawSQL, tootaja.Eesnimi, tootaja.Perenimi, tootaja.Kood, tootaja.AsutusID)
 
 	if err != nil {
-		err = fmt.Errorf("Unable to insert employee => %s", err.Error())
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 
 		return 0, err
 	} else {
-		log.Printf("Employee no %d inserted", insertedRowID)
+		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+	}
+
+	return
+}
+
+func InsertLicense(db *Database, tegevusluba Tegevusluba) (insertedRowID int, err error) {
+	table_name := "hco_license"
+
+	var rawSQL string = fmt.Sprintf(
+		"insert into %s "+
+			"(code, license_type_name, hco_id) "+
+			" values "+
+			"($1, $2, $3) RETURNING id",
+		table_name)
+
+	insertedRowID, err = db.Insert(rawSQL, tegevusluba.Number, tegevusluba.LoaliigiNimi, tegevusluba.AsutusID)
+
+	if err != nil {
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+
+		return 0, err
+	} else {
+		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+	}
+
+	return
+}
+
+func InsertLicenseResidence(db *Database, tk Tegevuskoht) (insertedRowID int, err error) {
+	table_name := "hco_license_residence"
+
+	var rawSQL string = fmt.Sprintf(
+		"insert into %s "+
+			"(hco_license_id, address) "+
+			" values "+
+			"($1, $2) RETURNING id",
+		table_name)
+
+	insertedRowID, err = db.Insert(rawSQL, tk.TegevuslubaID, tk.Aadress)
+
+	if err != nil {
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+
+		return 0, err
+	} else {
+		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
 	}
 
 	return

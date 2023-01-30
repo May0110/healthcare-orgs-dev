@@ -3,6 +3,7 @@ package lib
 import (
 	"log"
 	"os"
+	"time"
 )
 
 // GetDBURL returns database connection string
@@ -19,6 +20,8 @@ func CreateDatabaseTables(db *Database) (err error) {
 	log.Printf("Creating HCO database tables...")
 	log.Printf("")
 
+	time.Sleep(1 * time.Second)
+
 	err = CreateHealthcareOrganisation(db)
 	if err != nil {
 		return err
@@ -30,9 +33,15 @@ func CreateDatabaseTables(db *Database) (err error) {
 	}
 
 	err = CreateHealthcareOrganisationLicense(db)
+	if err != nil {
+		return err
+	}
+
+	err = CreateHcoLicenseResidence(db)
 
 	log.Printf("")
 	log.Printf("HCO database tables created!")
+	time.Sleep(1 * time.Second)
 	log.Printf("* * * * * * * * * * * * * * * * * * * * * * * * ")
 
 	return err
@@ -42,6 +51,8 @@ func DropDatabaseTables(db *Database) (err error) {
 	log.Printf("* * * * * * * * * * * * * * * * * * * * * * * * \n")
 	log.Printf("Dropping HCO database tables...")
 	log.Printf("")
+
+	time.Sleep(1 * time.Second)
 
 	err = DropHealthcareOrganisation(db)
 	if err != nil {
@@ -54,9 +65,15 @@ func DropDatabaseTables(db *Database) (err error) {
 	}
 
 	err = DropHealthcareOrganisationLicense(db)
+	if err != nil {
+		return err
+	}
+
+	err = DropHcoLicenseResidence(db)
 
 	log.Printf("")
 	log.Printf("HCO database tables dropped!\n")
+	time.Sleep(1 * time.Second)
 	log.Printf("* * * * * * * * * * * * * * * * * * * * * * * * ")
 
 	return err
