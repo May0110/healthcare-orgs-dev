@@ -1,3 +1,3 @@
 # gpcli
 
-![Data Model](/data/data-model.jpg "Data model")
+![Data Model](/data/data-model.png "Data model")
