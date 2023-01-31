@@ -46,7 +46,9 @@ func main() {
 		fmt.Println("")
 		fmt.Println(" 90 => create database tables")
 		fmt.Println(" 91 => drop database tables")
-		fmt.Println(" 92 => import HCO data into database")
+		fmt.Println(" 92 => import healthcare data into the database")
+		fmt.Println("")
+		fmt.Println(" 99 => display database statistics")
 		fmt.Println("")
 		fmt.Println("= = = = = = = = = = = = = = = = = = = = = = = = = =\n")
 		fmt.Print("Tee valik => ")
@@ -71,6 +73,8 @@ func main() {
 			lib.DropDatabaseTables(db)
 		} else if choice == "92" {
 			lib.Import(db)
+		} else if choice == "99" {
+			lib.DisplayTableStatisticsComplete(db)
 		} else if choice == CHOICE_EXIT {
 			fmt.Printf("\nProgramm sulgub! Head päeva :)\n\n")
 		} else {
