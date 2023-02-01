@@ -16,6 +16,7 @@ func ImportHCOData(db *Database) {
 
 	var hcoCount int = 0
 	var employeeCount int = 0
+	var employeeProfessionCount int = 0
 	var licenseCount int = 0
 	var licenseResidenceCount int = 0
 	var licenseResidenceServiceCount int = 0
@@ -51,13 +52,27 @@ outer:
 			tootaja := asutus.Tootajad[0].Tootajad[j]
 			tootaja.AsutusID = asutusID
 
-			_, err = InsertEmployee(db, tootaja)
+			tootajaID, err := InsertEmployee(db, tootaja)
 
 			if err != nil {
 				break outer
 			}
 
 			employeeCount++
+
+			var erialasid int = len(tootaja.Erialad[0].Erialad)
+			for mm := 0; mm < erialasid; mm++ {
+				eriala := tootaja.Erialad[0].Erialad[mm]
+				eriala.TootajaID = tootajaID
+
+				_, err = InsertEmployeeProfession(db, eriala)
+
+				if err != nil {
+					break outer
+				}
+
+				employeeProfessionCount++
+			}
 		}
 
 		var tegevuslube int = len(asutus.Tegevusload[0].Tegevusload)
@@ -104,8 +119,8 @@ outer:
 	}
 
 	log.Printf(
-		"HCO data import completed: %d HCO-s, %d employees, %d licenses, %d residences and %d services imported!",
-		hcoCount, employeeCount, licenseCount, licenseResidenceCount, licenseResidenceServiceCount)
+		"HCO data import completed: %d HCO-s, %d employees, %d employee professions, %d licenses, %d residences and %d services imported!",
+		hcoCount, employeeCount, employeeProfessionCount, licenseCount, licenseResidenceCount, licenseResidenceServiceCount)
 }
 
 func ImportHCOProfessions(db *Database) {
