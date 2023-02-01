@@ -53,6 +53,30 @@ func InsertEmployee(db *Database, tootaja Tootaja) (insertedRowID int, err error
 	return
 }
 
+func InsertEmployeeProfession(db *Database, eriala Eriala) (insertedRowID int, err error) {
+	table_name := "hco_employee_profession"
+
+	var rawSQL string = fmt.Sprintf(
+		"insert into %s "+
+			"(code, hco_employee_id) "+
+			" values "+
+			"($1, $2) RETURNING id",
+		table_name)
+
+	insertedRowID, err = db.Insert(rawSQL, eriala.Kood, eriala.TootajaID)
+
+	if err != nil {
+		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v", err)
+
+		return 0, err
+	} else {
+		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+	}
+
+	return
+}
+
 func InsertLicense(db *Database, tegevusluba Tegevusluba) (insertedRowID int, err error) {
 	table_name := "hco_license"
 
@@ -106,12 +130,12 @@ func InsertLicenseResidenceService(db *Database, teenus Teenus) (insertedRowID i
 
 	var rawSQL string = fmt.Sprintf(
 		"insert into %s "+
-			"(hco_license_residence_id, code, name) "+
+			"(hco_license_residence_id, code) "+
 			" values "+
-			"($1, $2, $3) RETURNING id",
+			"($1, $2) RETURNING id",
 		table_name)
 
-	insertedRowID, err = db.Insert(rawSQL, teenus.TegevuskohtID, teenus.Kood, teenus.Nimi)
+	insertedRowID, err = db.Insert(rawSQL, teenus.TegevuskohtID, teenus.Kood)
 
 	if err != nil {
 		err = fmt.Errorf("Unable to insert into '%s' => %s", table_name, err.Error())

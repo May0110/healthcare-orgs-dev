@@ -79,6 +79,7 @@ func DisplayTableStatisticsComplete(db *Database) {
 	fmt.Printf("\n")
 	displayTableStatistics(db, "hco_healthcare_organisation")
 	displayTableStatistics(db, "hco_employee")
+	displayTableStatistics(db, "hco_employee_profession")
 	displayTableStatistics(db, "hco_license_residence_service")
 	displayTableStatistics(db, "hco_license_residence")
 	displayTableStatistics(db, "hco_license")

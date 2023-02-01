@@ -32,6 +32,11 @@ func CreateDatabaseTables(db *Database) (err error) {
 		return err
 	}
 
+	err = CreateHcoEmployeeProfession(db)
+	if err != nil {
+		return err
+	}
+
 	err = CreateHealthcareOrganisationLicense(db)
 	if err != nil {
 		return err
@@ -75,6 +80,11 @@ func DropDatabaseTables(db *Database) (err error) {
 	}
 
 	err = DropHcoEmployee(db)
+	if err != nil {
+		return err
+	}
+
+	err = DropHcoEmployeeProfession(db)
 	if err != nil {
 		return err
 	}

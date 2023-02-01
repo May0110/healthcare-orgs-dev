@@ -41,14 +41,15 @@ type Tootajad struct {
 	Tootajad []Tootaja `xml:"tootaja"`
 }
 type Tootaja struct {
-	XMLName  xml.Name `xml:"tootaja"`
-	Eesnimi  string   `xml:"eesnimi"`
-	Perenimi string   `xml:"perenimi"`
-	Kood     string   `xml:"kood"`
-	Kutse    string   `xml:"kutse_nimi"`
-	Roll     string   `xml:"roll_nimi"`
-	AsutusID int      `xml:"asutus_id"`
-	ID       int      `xml:"primary-key"`
+	XMLName  xml.Name  `xml:"tootaja"`
+	Eesnimi  string    `xml:"eesnimi"`
+	Perenimi string    `xml:"perenimi"`
+	Kood     string    `xml:"kood"`
+	Kutse    string    `xml:"kutse_nimi"`
+	Roll     string    `xml:"roll_nimi"`
+	AsutusID int       `xml:"asutus_id"`
+	ID       int       `xml:"primary-key"`
+	Erialad  []Erialad `xml:"erialad"`
 }
 type Tegevusload struct {
 	XMLName     xml.Name      `xml:"tegevusload"`
@@ -89,9 +90,10 @@ type Erialad struct {
 	Erialad []Eriala `xml:"eriala"`
 }
 type Eriala struct {
-	XMLName xml.Name `xml:"eriala"`
-	Kood    string   `xml:"kood"`
-	Nimi    string   `xml:"nimi"`
+	XMLName   xml.Name `xml:"eriala"`
+	Kood      string   `xml:"kood"`
+	Nimi      string   `xml:"nimi"`
+	TootajaID int      `xml:"tootaja_id"`
 }
 
 func init() {
