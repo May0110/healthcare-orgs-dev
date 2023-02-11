@@ -2,7 +2,6 @@ package lib
 
 import (
 	"encoding/xml"
-	"fmt"
 )
 
 type Asutused struct {
@@ -97,5 +96,5 @@ type Eriala struct {
 }
 
 func init() {
-	fmt.Println("gplib initialized")
+	// fmt.Println("gplib initialized")
 }

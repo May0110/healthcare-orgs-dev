@@ -33,16 +33,16 @@ func main() {
 	var choice string = DEFAULT_CHOICE
 
 	for choice != "0" {
-		fmt.Println("= = = = = = = = = = = = = = = = = = = = = = = = = =")
+		fmt.Println("= = = = = = = = = MAIN MENU = = = = = = = = = = = =")
 		fmt.Println("")
-		fmt.Println(" 0 => välju!\n")
-		fmt.Println(" 1 => otsi tervishoiuasutust")
-		fmt.Println(" 2 => otsi tervishoiuasutust (kuvatakse ka tegevusalad ja töötajad)")
-		fmt.Println(" 3 => otsi tervishoiuasutuse töötajat")
+		fmt.Println(" 0 => quit!\n")
+		fmt.Println(" 1 => search for HCO (Health Care Organisation)")
+		fmt.Println(" 2 => search for HCO (activity fields and employees are also displayed)")
+		fmt.Println(" 3 => search for HCO employee")
 		fmt.Println("")
-		fmt.Println(" 10 => otsi perearstinimistut")
-		fmt.Println(" 20 => otsi perearstinimistut (kuvatakse ka töötajad)")
-		fmt.Println(" 30 => otsi perearstinimistu töötajat")
+		fmt.Println(" 10 => search for a General Practitioner (GP)")
+		fmt.Println(" 20 => search for a General Practitioner (employees are also displayed)")
+		fmt.Println(" 30 => search for a GP employee")
 		fmt.Println("")
 		fmt.Println(" 90 => create database tables")
 		fmt.Println(" 91 => drop database tables")
@@ -51,7 +51,7 @@ func main() {
 		fmt.Println(" 99 => display database statistics")
 		fmt.Println("")
 		fmt.Println("= = = = = = = = = = = = = = = = = = = = = = = = = =\n")
-		fmt.Print("Tee valik => ")
+		fmt.Print("Your choice => ")
 		fmt.Scanln(&choice)
 
 		// do we need database connection?
@@ -76,10 +76,10 @@ func main() {
 		} else if choice == "99" {
 			lib.DisplayTableStatisticsComplete(db)
 		} else if choice == CHOICE_EXIT {
-			fmt.Printf("\nProgramm sulgub! Head päeva :)\n\n")
+			fmt.Printf("\nProgram shutdown. Good night :)\n\n")
 		} else {
 			if choice != DEFAULT_CHOICE {
-				fmt.Printf("\n\nValik \"%s\" puudub, palun vali uuesti..\n\n", choice)
+				fmt.Printf("\n\nThe option \"%s\" does not exist in the menu. Please try again.\n\n", choice)
 			}
 		}
 

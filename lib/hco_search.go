@@ -11,7 +11,7 @@ import (
 
 func FindGpPatientList(choice string) {
 
-	fmt.Print("Otsi pererarsti nimistut => ")
+	fmt.Print("The name of a General Practitioner => ")
 	var keyword string
 	fmt.Scanln(&keyword)
 
@@ -48,7 +48,7 @@ func FindGpPatientList(choice string) {
 
 		var tootajaid int = len(nimistu.Tootajad[0].Tootajad)
 		if tootajaid > 0 {
-			log.Printf("    = = = TÖÖTAJAID (%d)", tootajaid)
+			log.Printf("    = = = EMPLOYEES (%d)", tootajaid)
 		}
 		for j := 0; j < tootajaid; j++ {
 			tootaja := nimistu.Tootajad[0].Tootajad[j]
@@ -63,7 +63,7 @@ func FindGpPatientList(choice string) {
 
 func FindGpOffice(choice string) {
 
-	fmt.Print("Otsi tervishoiuasutust => ")
+	fmt.Print("HCO name => ")
 	var keyword string
 	fmt.Scanln(&keyword)
 
@@ -99,7 +99,7 @@ func FindGpOffice(choice string) {
 
 		var tootajaid int = len(asutus.Tootajad[0].Tootajad)
 		if tootajaid > 0 {
-			log.Printf("    = = = TÖÖTAJAID (%d)", tootajaid)
+			log.Printf("    = = = EMPLOYEES (%d)", tootajaid)
 		}
 		for j := 0; j < tootajaid; j++ {
 			tootaja := asutus.Tootajad[0].Tootajad[j]
@@ -112,11 +112,11 @@ func FindGpOffice(choice string) {
 
 		var tegevuslube int = len(asutus.Tegevusload[0].Tegevusload)
 		if tegevuslube > 0 {
-			log.Printf("    = = = TEGEVUSLOAD (%d) = = =\n", tegevuslube)
+			log.Printf("    = = = LICENSES (%d) = = =\n", tegevuslube)
 		}
 		for k := 0; k < tegevuslube; k++ {
 			tl := asutus.Tegevusload[0].Tegevusload[k]
-			log.Printf("    %d) %s %s (Alates: %s | Kuni: %s)\n",
+			log.Printf("    %d) %s %s (From: %s | Until: %s)\n",
 				k+1,
 				tl.Number,
 				tl.LoaliigiNimi,
@@ -129,7 +129,7 @@ func FindGpOffice(choice string) {
 func FindGpOfficeEmployee() {
 	var empCount int = 0
 
-	fmt.Print("Otsi tervishoiuasutuse töötajat => ")
+	fmt.Print("The name of an HCO employee => ")
 	var keyword string
 	fmt.Scanln(&keyword)
 
@@ -171,7 +171,7 @@ func FindGpOfficeEmployee() {
 func FindPatientListEmployee() {
 	var empCount int = 0
 
-	fmt.Print("Otsi pererarstinimistu töötajat => ")
+	fmt.Print("The name of a GP employee => ")
 	var keyword string
 	fmt.Scanln(&keyword)
 
