@@ -12,7 +12,7 @@ func GetDBURL() string {
 		return dbURL
 	}
 
-	return "host=localhost user=jkarner dbname=mydb"
+	return "host=localhost user=hco password=hco dbname=mydb"
 }
 
 func CreateDatabaseTables(db *Database) (err error) {
