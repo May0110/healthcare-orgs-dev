@@ -22,7 +22,7 @@ func CreateHealthcareOrganisation(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -40,7 +40,7 @@ func DropHealthcareOrganisation(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -64,7 +64,7 @@ func CreateHcoEmployee(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -79,14 +79,14 @@ func CreateHcoEmployeeProfession(db *Database) (err error) {
 		"CREATE TABLE " + table_name +
 			" (id SERIAL PRIMARY KEY, " +
 			" hco_employee_id INT NOT NULL, " +
-			" code VARCHAR(20) NOT NULL) ")
+			" hco_profession_id INT NOT NULL) ")
 
 	err = db.ExecuteDDL(rawSQL)
 
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -104,7 +104,7 @@ func DropHcoEmployeeProfession(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -122,7 +122,7 @@ func DropHcoEmployee(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -147,7 +147,7 @@ func CreateHealthcareOrganisationLicense(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -169,7 +169,7 @@ func CreateHcoLicenseResidence(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -184,15 +184,15 @@ func CreateHcoLicenseResidenceService(db *Database) (err error) {
 		"CREATE TABLE " + table_name +
 			" (id SERIAL PRIMARY KEY, " +
 			" hco_license_residence_id INT NOT NULL, " +
-			" code VARCHAR(15) NOT NULL)")
+			" hco_service_id INT NOT NULL)")
 
 	err = db.ExecuteDDL(rawSQL)
 
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
-		fmt.Printf("DB ERROR => %v", err)
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
+		fmt.Printf("DB ERROR => %v\n", err)
 	}
 
 	time.Sleep(time.Duration(ddlSleepMilliseconds) * time.Millisecond)
@@ -204,7 +204,8 @@ func CreateHcoService(db *Database) (err error) {
 	table_name := "hco_service"
 	var rawSQL string = fmt.Sprintf(
 		"CREATE TABLE " + table_name +
-			" (code VARCHAR(15) NOT NULL, " +
+			" (id SERIAL PRIMARY KEY, " +
+			"  code VARCHAR(15) NOT NULL, " +
 			"  name VARCHAR(200) NOT NULL)")
 
 	err = db.ExecuteDDL(rawSQL)
@@ -212,7 +213,7 @@ func CreateHcoService(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -225,7 +226,8 @@ func CreateHcoProfession(db *Database) (err error) {
 	table_name := "hco_profession"
 	var rawSQL string = fmt.Sprintf(
 		"CREATE TABLE " + table_name +
-			" (code VARCHAR(15) PRIMARY KEY, " +
+			" (id SERIAL PRIMARY KEY, " +
+			"  code VARCHAR(15) NOT NULL, " +
 			"  name VARCHAR(200) NOT NULL)")
 
 	err = db.ExecuteDDL(rawSQL)
@@ -233,7 +235,7 @@ func CreateHcoProfession(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' created", table_name)
 	} else {
-		err = fmt.Errorf("Unable to create table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to create table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -251,7 +253,7 @@ func DropHcoProfession(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -269,7 +271,7 @@ func DropHcoService(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -287,7 +289,7 @@ func DropHcoLicenseResidenceService(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -305,7 +307,7 @@ func DropHcoLicenseResidence(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 
@@ -323,7 +325,7 @@ func DropHealthcareOrganisationLicense(db *Database) (err error) {
 	if err == nil {
 		log.Printf("Database table '%s' dropped", table_name)
 	} else {
-		err = fmt.Errorf("Unable to drop table '%s' => %s", table_name, err.Error())
+		err = fmt.Errorf("unable to drop table '%s' => %s", table_name, err.Error())
 		fmt.Printf("DB ERROR => %v", err)
 	}
 

@@ -9,13 +9,13 @@ func doesTableExist(db *Database, tableName string) (response bool) {
 	var rawSQL string = fmt.Sprintf("SELECT * FROM pg_catalog.pg_tables WHERE tablename = '%s'", tableName)
 
 	rows, err := db.ExecuteQuery(rawSQL)
-	defer rows.Close()
-
 	if err != nil {
 		log.Fatal(err)
 
 		return false
 	}
+
+	defer rows.Close()
 
 	if rows.Next() {
 		return true
@@ -30,13 +30,13 @@ func countRows(db *Database, table string) (rowCount int, err error) {
 	var rawSQL string = fmt.Sprintf("SELECT count(*) FROM %s", table)
 
 	rows, err := db.ExecuteQuery(rawSQL)
-	defer rows.Close()
-
 	if err != nil {
 		log.Fatal(err)
 
 		return 0, err
 	}
+
+	defer rows.Close()
 
 	// go through the result set
 	for rows.Next() {
@@ -61,7 +61,7 @@ func displayTableStatistics(db *Database, tableName string) {
 		rowCount, err = countRows(db, tableName)
 
 		if err != nil {
-			errText := fmt.Errorf("Unable to display table ('%s') statistics => %s", tableName, err.Error())
+			errText := fmt.Errorf("unable to display table ('%s') statistics => %s", tableName, err.Error())
 			fmt.Println(errText)
 
 			return
@@ -69,8 +69,6 @@ func displayTableStatistics(db *Database, tableName string) {
 	}
 
 	fmt.Printf("Table '%s' exists => %t | Row count : %d\n", tableName, tableExists, rowCount)
-
-	return
 }
 
 func DisplayTableStatisticsComplete(db *Database) {
@@ -87,6 +85,4 @@ func DisplayTableStatisticsComplete(db *Database) {
 	displayTableStatistics(db, "hco_profession")
 	fmt.Printf("\n")
 	fmt.Printf("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n\n")
-
-	return
 }

@@ -80,9 +80,11 @@ type Teenused struct {
 }
 type Teenus struct {
 	XMLName       xml.Name `xml:"teenus"`
+	ID            int      `xml:"primary-key"`
 	Kood          string   `xml:"kood"`
 	Nimi          string   `xml:"nimi"`
 	TegevuskohtID int      `xml:"tegevuskoht_id"`
+	TeenusID      int      `xml:"teenus_id"`
 }
 type Erialad struct {
 	XMLName xml.Name `xml:"erialad"`
@@ -90,9 +92,11 @@ type Erialad struct {
 }
 type Eriala struct {
 	XMLName   xml.Name `xml:"eriala"`
+	ID        int      `xml:"primary-key"`
 	Kood      string   `xml:"kood"`
 	Nimi      string   `xml:"nimi"`
 	TootajaID int      `xml:"tootaja_id"`
+	ErialaID  int      `xml:"eriala_id"`
 }
 
 func init() {

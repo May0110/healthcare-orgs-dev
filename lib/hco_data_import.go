@@ -9,6 +9,9 @@ import (
 	"time"
 )
 
+var teenusedMap map[string]Teenus
+var erialadMap map[string]Eriala
+
 func ImportHCOData(db *Database) {
 	log.Printf("Starting with HCO data import...")
 
@@ -64,6 +67,7 @@ outer:
 			for mm := 0; mm < erialasid; mm++ {
 				eriala := tootaja.Erialad[0].Erialad[mm]
 				eriala.TootajaID = tootajaID
+				eriala.ErialaID = erialadMap[eriala.Kood].ID
 
 				_, err = InsertEmployeeProfession(db, eriala)
 
@@ -105,6 +109,7 @@ outer:
 				for mm := 0; mm < teenuseid; mm++ {
 					teenus := tegevuskoht.Teenused[0].Teenused[mm]
 					teenus.TegevuskohtID = tegevuskohtID
+					teenus.TeenusID = teenusedMap[teenus.Kood].ID
 
 					_, err = InsertLicenseResidenceService(db, teenus)
 
@@ -128,6 +133,9 @@ func ImportHCOProfessions(db *Database) {
 
 	time.Sleep(1 * time.Second)
 
+	// create a map of professions and keep it in memory
+	erialadMap = make(map[string]Eriala)
+
 	var recordCount int = 0
 
 	xmlFile, err := os.Open("data/od_erialad.xml")
@@ -148,10 +156,15 @@ func ImportHCOProfessions(db *Database) {
 	for i := 0; i < len(erialad.Erialad); i++ {
 		var eriala Eriala = erialad.Erialad[i]
 
-		_, err = InsertProfession(db, eriala)
+		id, err := InsertProfession(db, eriala)
 		if err != nil {
 			return
 		}
+
+		eriala.ID = id
+
+		// add the profession to the map
+		erialadMap[eriala.Kood] = eriala
 
 		recordCount++
 	}
@@ -163,6 +176,9 @@ func ImportHCOServices(db *Database) {
 	log.Printf("Starting with HCO services import...")
 
 	time.Sleep(1 * time.Second)
+
+	// create a map of services and keep it in memory
+	teenusedMap = make(map[string]Teenus)
 
 	var recordCount int = 0
 
@@ -184,10 +200,15 @@ func ImportHCOServices(db *Database) {
 	for i := 0; i < len(teenused.Teenused); i++ {
 		var teenus Teenus = teenused.Teenused[i]
 
-		_, err = InsertService(db, teenus)
+		id, err := InsertService(db, teenus)
 		if err != nil {
 			return
 		}
+
+		teenus.ID = id
+
+		// add the service to the map
+		teenusedMap[teenus.Kood] = teenus
 
 		recordCount++
 	}
@@ -196,7 +217,7 @@ func ImportHCOServices(db *Database) {
 }
 
 func Import(db *Database) {
-	ImportHCOData(db)
 	ImportHCOProfessions(db)
 	ImportHCOServices(db)
+	ImportHCOData(db)
 }
