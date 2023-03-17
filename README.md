@@ -54,19 +54,45 @@ It displays a menu and waits for your choice of action
 Your choice => 
 
 ```
-### Option '90' : display full list of cars
+### Options '1' to '30'
+
+Searching health care organisations or employees.
+
+### Option '90' : create database tables
 
 Prints out the entire database of car models. At the time of writing, ca 400 items.
 
-### Option '91' : search cars
+### Option '91' : drop database tables
 
 You can search specific cars by name (e.g. Ford), model (e.g. Ranger) or country of origin (USA, Japan, Europe).
 
-### Option '92' : display car statistics
+### Option '92' : import healthcare data into the database
 
 The option generates 7 different bar charts and opens them on your default browser. 
 
 p.s. if, for some reason, it does not open the browser, the generated file is located on "./temp/bar.html"
+
+### Option '99' : display database statistics
+
+The option generates 7 different bar charts and opens them on your default browser. 
+
+p.s. if, for some reason, it does not open the browser, the generated file is located on "./temp/bar.html"
+
+```
+* * * * * * * * * * * * * * DATABASE STATISTICS * * * * * * * * * * * * * * 
+
+Table 'hco_healthcare_organisation' exists => true | Row count : 1649
+Table 'hco_employee' exists => true | Row count : 968
+Table 'hco_employee_profession' exists => true | Row count : 730
+Table 'hco_license_residence_service' exists => true | Row count : 4812
+Table 'hco_license_residence' exists => true | Row count : 3352
+Table 'hco_license' exists => true | Row count : 2638
+Table 'hco_service' exists => true | Row count : 247
+Table 'hco_profession' exists => true | Row count : 65
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+```
+
 
 ## Data model
 
