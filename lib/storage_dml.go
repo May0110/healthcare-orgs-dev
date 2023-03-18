@@ -2,7 +2,6 @@ package lib
 
 import (
 	"fmt"
-	"log"
 )
 
 func InsertHealthcareOrganisation(db *Database, asutus Asutus) (insertedRowID int, err error) {
@@ -23,7 +22,8 @@ func InsertHealthcareOrganisation(db *Database, asutus Asutus) (insertedRowID in
 
 		return 0, err
 	} else {
-		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		text := fmt.Sprintf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -47,7 +47,8 @@ func InsertEmployee(db *Database, tootaja Tootaja) (insertedRowID int, err error
 
 		return 0, err
 	} else {
-		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		text := fmt.Sprintf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -71,7 +72,8 @@ func InsertEmployeeProfession(db *Database, eriala Eriala) (insertedRowID int, e
 
 		return 0, err
 	} else {
-		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		text := fmt.Sprintf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -95,7 +97,8 @@ func InsertLicense(db *Database, tegevusluba Tegevusluba) (insertedRowID int, er
 
 		return 0, err
 	} else {
-		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		text := fmt.Sprintf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -119,7 +122,8 @@ func InsertLicenseResidence(db *Database, tk Tegevuskoht) (insertedRowID int, er
 
 		return 0, err
 	} else {
-		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		text := fmt.Sprintf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -143,7 +147,8 @@ func InsertLicenseResidenceService(db *Database, teenus Teenus) (insertedRowID i
 
 		return 0, err
 	} else {
-		log.Printf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		text := fmt.Sprintf("Row no %d was inserted into '%s'", insertedRowID, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -167,7 +172,8 @@ func InsertProfession(db *Database, eriala Eriala) (insertedRowID int, err error
 
 		return 0, err
 	} else {
-		log.Printf("Row no %s was inserted into '%s'", eriala.Kood, table_name)
+		text := fmt.Sprintf("Row no %s was inserted into '%s'", eriala.Kood, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return
@@ -191,7 +197,8 @@ func InsertService(db *Database, teenus Teenus) (insertedRowID int, err error) {
 
 		return 0, err
 	} else {
-		log.Printf("Row no %s was inserted into '%s'", teenus.Kood, table_name)
+		text := fmt.Sprintf("Row no %s was inserted into '%s'", teenus.Kood, table_name)
+		Logger.Log(PRIORITY_NORMAL, text)
 	}
 
 	return

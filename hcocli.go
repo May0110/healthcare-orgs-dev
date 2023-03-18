@@ -30,12 +30,16 @@ func initializeDatabaseConnection() (err error) {
 }
 
 func main() {
+	// set log level to 'normal' for detailed import info
+	lib.Logger = lib.NewLogger(lib.PRIORITY_HIGH)
+
 	var choice string = DEFAULT_CHOICE
 
 	for choice != "0" {
 		fmt.Println("= = = = = = = = = MAIN MENU = = = = = = = = = = = =")
 		fmt.Println("")
-		fmt.Println(" 0 => quit!\n")
+		fmt.Println(" 0 => quit!")
+		fmt.Println("")
 		fmt.Println(" 1 => search for HCO (Health Care Organisation)")
 		fmt.Println(" 2 => search for HCO (activity fields and employees are also displayed)")
 		fmt.Println(" 3 => search for HCO employee")
@@ -50,7 +54,8 @@ func main() {
 		fmt.Println("")
 		fmt.Println(" 99 => display database statistics")
 		fmt.Println("")
-		fmt.Println("= = = = = = = = = = = = = = = = = = = = = = = = = =\n")
+		fmt.Println("= = = = = = = = = = = = = = = = = = = = = = = = = =")
+		fmt.Println("")
 		fmt.Print("Your choice => ")
 		fmt.Scanln(&choice)
 

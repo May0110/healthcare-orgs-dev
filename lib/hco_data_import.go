@@ -4,7 +4,6 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"os"
 	"time"
 )
@@ -13,7 +12,7 @@ var teenusedMap map[string]Teenus
 var erialadMap map[string]Eriala
 
 func ImportHCOData(db *Database) {
-	log.Printf("Starting with HCO data import...")
+	Logger.Log(PRIORITY_HIGH, "Starting with HCO data import...")
 
 	time.Sleep(1 * time.Second)
 
@@ -123,13 +122,14 @@ outer:
 		}
 	}
 
-	log.Printf(
+	text := fmt.Sprintf(
 		"HCO data import completed: %d HCO-s, %d employees, %d employee professions, %d licenses, %d residences and %d services imported!",
 		hcoCount, employeeCount, employeeProfessionCount, licenseCount, licenseResidenceCount, licenseResidenceServiceCount)
+	Logger.Log(PRIORITY_HIGH, text)
 }
 
 func ImportHCOProfessions(db *Database) {
-	log.Printf("Starting with HCO professions import...")
+	Logger.Log(PRIORITY_HIGH, "Starting with HCO professions import...")
 
 	time.Sleep(1 * time.Second)
 
@@ -169,11 +169,12 @@ func ImportHCOProfessions(db *Database) {
 		recordCount++
 	}
 
-	log.Printf("HCO import completed: %d professions imported!", recordCount)
+	text := fmt.Sprintf("HCO import completed: %d professions imported!", recordCount)
+	Logger.Log(PRIORITY_HIGH, text)
 }
 
 func ImportHCOServices(db *Database) {
-	log.Printf("Starting with HCO services import...")
+	Logger.Log(PRIORITY_HIGH, "Starting with HCO services import...")
 
 	time.Sleep(1 * time.Second)
 
@@ -213,11 +214,16 @@ func ImportHCOServices(db *Database) {
 		recordCount++
 	}
 
-	log.Printf("HCO import completed: %d services imported!", recordCount)
+	text := fmt.Sprintf("HCO import completed: %d services imported!", recordCount)
+	Logger.Log(PRIORITY_HIGH, text)
 }
 
 func Import(db *Database) {
+	Logger.Log(PRIORITY_HIGH, "\n")
+
 	ImportHCOProfessions(db)
 	ImportHCOServices(db)
 	ImportHCOData(db)
+
+	Logger.Log(PRIORITY_HIGH, "\n")
 }
