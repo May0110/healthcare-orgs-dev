@@ -24,6 +24,14 @@ The CLI can create data structures in PostgreSQL and complete the import of the 
 
 Go 1.18 or higher
 
+PostgreSQL 14.6 or higher.
+
+p.s. If you want to create the tables on Postgre database and import HCO data (menu items from 90 till 99), you need to have DATABASE_URL environment variable assigned, specifying the host, database and DB credentials, in order to complete the import. If you do not need database import, the postgre nor the DATABASE_URL variable are needed.
+
+```
+export DATABASE_URL="host=localhost user=hco password=hco dbname=mydb"
+```
+
 ## Usage
 
 To run the command line client
