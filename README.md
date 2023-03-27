@@ -4,7 +4,7 @@
   * [Intro](#intro)
   * [Requirements](#requirements)
   * [Usage](#usage)
-    * [Option '1-30' : search](#option-1-to-30) 
+    * [Options '1-30' : search](#options-1-to-30) 
     * [Option '90' : create database tables](#option-90--create-database-tables) 
     * [Option '91' : drop database tables](#option-91--drop-database-tables) 
     * [Option '92' : import healthcare data](#option-92--import-healthcare-data) 
