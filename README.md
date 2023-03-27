@@ -62,6 +62,8 @@ Your choice =>
 
 Different dialogs for searching health care organisations, GP-s or employees.
 
+NB! note, that the search is run against JSON files not the database. The files are located on the "/data" directory and can be refreshed from the website of [Estonian Health Board public registries](https://medre.tehik.ee/open-data).
+
 ### Option '90' : create database tables
 
 Creates all the needed HCO tables in the database.
@@ -76,7 +78,7 @@ Fills the tables with HCO data taken from the JSON files.
 
 ### Option '99' : display database statistics
 
-Displays database statistics (as shown below), showing if the HCO tables exist and how many records they hold.
+Displays database statistics (as given below), showing if the HCO tables exist and how many records they hold.
 
 ```
 * * * * * * * * * * * * * * DATABASE STATISTICS * * * * * * * * * * * * * * 
