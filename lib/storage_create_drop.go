@@ -6,13 +6,20 @@ import (
 	"time"
 )
 
+const DEFAULT_CONNECTION_STRING = "host=localhost user=hco password=hco dbname=mydb"
+
 // GetDBURL returns database connection string
 func GetDBURL() string {
 	if dbURL := os.Getenv("DATABASE_URL"); dbURL != "" {
+		log.Printf("env variable 'DATABASE_URL' found => %s", dbURL)
 		return dbURL
 	}
 
-	return "host=localhost user=hco password=hco dbname=mydb"
+	log.Printf(
+		"env variable 'DATABASE_URL' not found, using default connection string (%s)",
+		DEFAULT_CONNECTION_STRING)
+
+	return DEFAULT_CONNECTION_STRING
 }
 
 func CreateDatabaseTables(db *Database) (err error) {
