@@ -5,10 +5,10 @@
   * [Requirements](#requirements)
   * [Usage](#usage)
     * [Option '1-30' : display full list of cars](display-full-list-of-cars) 
-    * [Option '90' : create database tables](search-cars) 
-    * [Option '91' : drop database tables](search-cars) 
-    * [Option '92' : import data](search-cars) 
-    * [Option '99' : display database statistics](search-cars) 
+    * [Option '90' : create database tables](#option-90--create-database-tables) 
+    * [Option '91' : drop database tables](#option-91--drop-database-tables) 
+    * [Option '92' : import healthcare data](#option-92--import-healthcare-data) 
+    * [Option '99' : display database statistics](#option-90--display-database-statistics) 
   * [Data Model](#data-model)
   * [License](#license)
 
@@ -64,13 +64,13 @@ Different dialogs for searching health care organisations, GP-s or employees.
 
 ### Option '90' : create database tables
 
-Creates all the needed HCO tables.
+Creates all the needed HCO tables in the database.
 
 ### Option '91' : drop database tables
 
-Drops all HCO tables.
+Drops all HCO tables from the database.
 
-### Option '92' : import healthcare data into the database
+### Option '92' : import healthcare data
 
 Fills the tables with HCO data taken from the JSON files.
 
