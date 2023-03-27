@@ -4,11 +4,11 @@
   * [Intro](#intro)
   * [Requirements](#requirements)
   * [Usage](#usage)
-    * [Option '1-30' : display full list of cars](display-full-list-of-cars) 
+    * [Option '1-30' : search](#option-1-to-30) 
     * [Option '90' : create database tables](#option-90--create-database-tables) 
     * [Option '91' : drop database tables](#option-91--drop-database-tables) 
     * [Option '92' : import healthcare data](#option-92--import-healthcare-data) 
-    * [Option '99' : display database statistics](#option-90--display-database-statistics) 
+    * [Option '99' : display database statistics](#option-99--display-database-statistics) 
   * [Data Model](#data-model)
   * [License](#license)
 
