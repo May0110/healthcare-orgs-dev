@@ -16,7 +16,7 @@
 
 ## Intro
 
-This is a command line interface (CLI), implemented in Golang, enabling the import and processing of public data of Estonian Health Board. The data is available on their [web page](https://medre.tehik.ee/open-data) and includes the registries of healthcare institutions, general practitioners, healthcare professions and healthcare services.
+This is a command line interface (CLI), implemented in Golang, enabling the import and processing of public data of Estonian Health Board. The data is available on their [web page](https://medre.tehik.ee/open-data) and includes the registries of healthcare organisations (HCO-s), general practitioners (GP-s), healthcare professions and healthcare services.
 
 The CLI can create data structures in PostgreSQL and complete the import of the registries. 
 
@@ -62,7 +62,7 @@ Your choice =>
 
 Different dialogs for searching health care organisations, GP-s or employees.
 
-NB! note, that the search is run against JSON files not the database. The files are located on the "/data" directory and can be refreshed from the website of [Estonian Health Board public registries](https://medre.tehik.ee/open-data).
+NB! note, that the search is run against XML files, not the Postgre database. The XML files are located on the "/data" directory and can be refreshed from the website of [Estonian Health Board public registries](https://medre.tehik.ee/open-data).
 
 ### Option '90' : create database tables
 
@@ -94,7 +94,6 @@ Table 'hco_profession' exists => true | Row count : 65
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ```
-
 
 ## Data model
 
