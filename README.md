@@ -81,7 +81,7 @@ Drops all HCO tables from the database.
 
 ### Option '92' : import healthcare data
 
-Fills the tables with HCO data taken from the JSON files.
+Fills the tables with HCO data loaded from the registry XML files.
 
 ### Option '99' : display database statistics
 
