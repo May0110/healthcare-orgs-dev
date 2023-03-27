@@ -4,9 +4,11 @@
   * [Intro](#intro)
   * [Requirements](#requirements)
   * [Usage](#usage)
-    * [Option '1' : display full list of cars](display-full-list-of-cars) 
-    * [Option '2' : search cars](search-cars) 
-    * [Option '3' : display car statistics](display-car-statistics) 
+    * [Option '1-30' : display full list of cars](display-full-list-of-cars) 
+    * [Option '90' : create database tables](search-cars) 
+    * [Option '91' : drop database tables](search-cars) 
+    * [Option '92' : import data](search-cars) 
+    * [Option '99' : display database statistics](search-cars) 
   * [Data Model](#data-model)
   * [License](#license)
 
@@ -14,7 +16,9 @@
 
 ## Intro
 
-It is a command line client, implemented in Golang, enabling to process and extract statistics about car models produced in USA, Japan and Europe between 1978 and 1982, visualising some interesting trends. The origin of the data is [data.world](https://data.world/dataman-udit/cars-data) website.
+This is a command line interface (CLI), implemented in Golang, enabling the import and processing of public data of Estonian Health Board. The data is available on their [web page](https://medre.tehik.ee/open-data) and includes the registries of healthcare institutions, general practitioners, healthcare professions and healthcare services.
+
+The CLI can create data structures in PostgreSQL and complete the import of the registries. 
 
 ## Requirements
 
@@ -56,27 +60,23 @@ Your choice =>
 ```
 ### Options '1' to '30'
 
-Searching health care organisations or employees.
+Different dialogs for searching health care organisations, GP-s or employees.
 
 ### Option '90' : create database tables
 
-Prints out the entire database of car models. At the time of writing, ca 400 items.
+Creates all the needed HCO tables.
 
 ### Option '91' : drop database tables
 
-You can search specific cars by name (e.g. Ford), model (e.g. Ranger) or country of origin (USA, Japan, Europe).
+Drops all HCO tables.
 
 ### Option '92' : import healthcare data into the database
 
-The option generates 7 different bar charts and opens them on your default browser. 
-
-p.s. if, for some reason, it does not open the browser, the generated file is located on "./temp/bar.html"
+Fills the tables with HCO data taken from the JSON files.
 
 ### Option '99' : display database statistics
 
-The option generates 7 different bar charts and opens them on your default browser. 
-
-p.s. if, for some reason, it does not open the browser, the generated file is located on "./temp/bar.html"
+Displays database statistics (as shown below), showing if the HCO tables exist and how many records they hold.
 
 ```
 * * * * * * * * * * * * * * DATABASE STATISTICS * * * * * * * * * * * * * * 
