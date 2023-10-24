@@ -110,6 +110,8 @@ outer:
 					teenus.TegevuskohtID = tegevuskohtID
 					teenus.TeenusID = teenusedMap[teenus.Kood].ID
 
+					// fmt.Printf("Teenus => kood %s, nimi: %s, teenusID: %d\n", teenus.Kood, teenus.Nimi, teenus.TeenusID)
+
 					_, err = InsertLicenseResidenceService(db, teenus)
 
 					if err != nil {
@@ -210,6 +212,8 @@ func ImportHCOServices(db *Database) {
 
 		// add the service to the map
 		teenusedMap[teenus.Kood] = teenus
+
+		// fmt.Printf("Add to MAP => kood %s, nimi: %s, teenusID: %d\n", teenus.Kood, teenus.Nimi, teenus.ID)
 
 		recordCount++
 	}

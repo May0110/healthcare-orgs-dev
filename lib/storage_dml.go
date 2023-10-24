@@ -161,7 +161,7 @@ func InsertProfession(db *Database, eriala Eriala) (insertedRowID int, err error
 		"insert into %s "+
 			"(code, name) "+
 			" values "+
-			"($1, $2) RETURNING 0",
+			"($1, $2) RETURNING id",
 		table_name)
 
 	insertedRowID, err = db.Insert(rawSQL, eriala.Kood, eriala.Nimi)
@@ -186,7 +186,7 @@ func InsertService(db *Database, teenus Teenus) (insertedRowID int, err error) {
 		"insert into %s "+
 			"(code, name) "+
 			" values "+
-			"($1, $2) RETURNING 0",
+			"($1, $2) RETURNING id",
 		table_name)
 
 	insertedRowID, err = db.Insert(rawSQL, teenus.Kood, teenus.Nimi)
