@@ -1,11 +1,22 @@
+SELECT count(*)
+FROM hco_license_residence_service ls_pro
+  INNER JOIN hco_license_residence res ON ls_pro.hco_license_residence_id = res.id
+  INNER JOIN hco_service ser ON ls_pro.hco_service_id = ser.id;
 
+/*
+--COUNT kasutamine INNER JOINi puhul--
+SELECT count(*)
+FROM hco_license_residence_service ls_pro
+  INNER JOIN hco_license_residence res ON ls_pro.hco_license_residence_id = res.id
+  INNER JOIN hco_service ser ON ls_pro.hco_service_id = ser.id;
+
+  --ORDER BY ja INNER JOIN
 SELECT ser.name service_name, res.address residense_address
 FROM hco_license_residence_service ls_pro
   INNER JOIN hco_license_residence res ON ls_pro.hco_license_residence_id = res.id
   INNER JOIN hco_service ser ON ls_pro.hco_service_id = ser.id
 ORDER BY ser.name ASC;
 
-/*
 --INNER JOIN näidis---
 SELECT emp_pro.hco_profession_id, emp.surname, pro.name
 FROM hco_employee_profession emp_pro
