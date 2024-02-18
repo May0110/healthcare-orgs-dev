@@ -1,3 +1,65 @@
+-- asutuste loetelu koos töötajate arvuga, järjestatud töötajate arvu järgi
+-- (suuremad enne). Filtreeritakse välja need kus on rohkem kui 10 töötajat.
+-- NB! Kasutan order ja group by's aliaseid
+SELECT hco.name Asutus, count(*) Töötajaid
+FROM hco_employee emp
+  INNER JOIN hco_healthcare_organisation hco ON emp.hco_ID = hco.ID
+GROUP BY
+  asutus
+HAVING
+  count(*) > 10
+ORDER BY
+  asutus ASC;
+
+/*
+
+-- asutuste loetelu koos töötajate arvuga, järjestatud töötajate arvu järgi
+-- (suuremad enne). Filtreeritakse välja need kus on rohkem kui 10 töötajat.
+-- NB! Kasutan order ja group by's aliaseid
+SELECT hco.name Asutus, count(*) Töötajaid
+FROM hco_employee emp
+  INNER JOIN hco_healthcare_organisation hco ON emp.hco_ID = hco.ID
+GROUP BY
+  asutus
+HAVING
+  count(*) > 10
+ORDER BY
+  asutus ASC;
+  
+-- asutuste loetelu koos töötajate arvuga, järjestatud töötajate arvu järgi
+-- (suuremad enne). Filtreeritakse välja need kus on rohkem kui 10 töötajat.
+SELECT hco.name Asutus, count(*) Töötajaid
+FROM hco_employee emp
+  INNER JOIN hco_healthcare_organisation hco ON emp.hco_ID = hco.ID
+GROUP BY
+  hco.name
+HAVING
+  count(*) > 10
+ORDER BY
+  count(*) DESC;
+
+-- asutuste loetelu koos töötajate arvuga, järjestatud töötajate arvu järgi (suuremad enne)
+SELECT hco.name Asutus, count(*) Töötajaid
+FROM hco_employee emp
+  INNER JOIN hco_healthcare_organisation hco ON emp.hco_ID = hco.ID
+GROUP BY
+  hco.name
+ORDER BY
+  count(*) DESC
+
+-- asutuste loetelu koos töötajate arvuga, järjestatud asutuse nime järgi
+SELECT hco.name Asutus, count(*) Töötajaid
+FROM hco_employee emp
+  INNER JOIN hco_healthcare_organisation hco ON emp.hco_ID = hco.ID
+GROUP BY
+  hco.name
+ORDER BY
+  hco.name ASC;
+
+-- töötajad ja nende asutused
+SELECT emp.firstname Eesnimi, emp.surname Perenimi, hco.name Asutus
+FROM hco_employee emp
+  INNER JOIN hco_healthcare_organisation hco ON emp.hco_ID = hco.ID;
 
 -- töötajad koos organisatsioonide ja eridaladega
 SELECT
@@ -10,9 +72,6 @@ FROM hco_employee_profession emp_pro, hco_license
   INNER JOIN hco ON lic.hco_id = hco.id
 WHERE
   hco.name LIKE 'A%';
-
-/*
-
 
 SELECT emp.firstname Eesnimi, emp.surname Perenimi, hco.name Asutus
 FROM hco_employee emp

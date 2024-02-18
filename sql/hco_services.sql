@@ -1,13 +1,24 @@
-SELECT lic.id, address
-FROM hco_license_residence licres
-INNER JOIN hco_license lic ON licres.hco_license_id = lic_id;
+
 /*
 
 1) organisatsioonide tegevuskohad
-SELECT lic.id, address
-FROM hco_license_residence lic res
-INNER JOIN hco_license lic ON lic res.hco_license_id = lic_id;
+SELECT res.aadress, lic.hco_id
+FROM hco_license_residence res
+INNER JOIN hco_license lic ON res.lic_id = lic.id;
+
+SELECT lic.id, , address
+FROM hco_license_residence licres
+INNER JOIN hco_license lic ON licres.hco_license_id = lic.id;
 2) organisatsioonide teenused eri tegevuskohtades
+SELECT ser.name teenus, res.address
+FROM hco_license_residence_service liser
+  INNER JOIN hco_service ser ON liser.hco_service_id = ser.id
+  INNER JOIN hco_license_residence res ON liser.hco_license_residence_id = res.id;
+--vale--
+SELECT ser.name, liser.address
+FROM hco_license_residence_service liser
+INNER JOIN hco_service ser ON liser.hco_service.id = ser.id;
+
 
 -- andmete olemasolu kontroll --
 select *
